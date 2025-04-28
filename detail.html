@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Html</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container p-5">
+      <h1 class="display-3 fw-bold">Product Details</h1>
+      <div class="row">
+        <div class="col-6">
+          <img
+            src="images/airpods.webp"
+            id="pro-image"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-6">
+          <h1 class="display-4 fw-bold" id="title">Title</h1>
+          <p id="pro-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
+            doloribus cum, at voluptates facilis recusandae itaque obcaecati
+            enim nam quos aliquid voluptas consectetur perspiciatis tempore
+            asperiores ratione magni! Ipsa, eveniet.
+          </p>
+          <h3 id="pro-price">$899</h3>
+          <button class="btn btn-primary">Buy Now</button>
+          <button class="btn btn-outline-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      let url = new URL(window.location.href);
+      let i = url.searchParams.getAll("index");
+      console.log(products[i]);
+      document
+        .getElementById("pro-image")
+        .setAttribute("src", products[i].product_image);
+      document.getElementById("title").innerText = products[i].product_title;
+      document.getElementById("pro-description").innerText =
+        products[i].product_description;
+      document.getElementById("pro-price").innerText =
+        products[i].product_price;
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

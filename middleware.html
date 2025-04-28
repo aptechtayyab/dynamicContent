@@ -1,0 +1,13 @@
+<script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      let data = localStorage.getItem("data");
+      if(!data){
+        alert("Your account has been deleted register again!");
+        window.location.href = "register.html";
+      }
+      else{
+        window.location.href = "index.html";
+
+      }
+    })
+  </script>

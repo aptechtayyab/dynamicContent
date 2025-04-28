@@ -1,0 +1,69 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let data = localStorage.getItem("data");
+    if (!data) {
+      alert("Your account has been deleted register again!");
+      window.location.href = "register.html";
+    }
+  });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .search-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .card-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  </style>
+  <body>
+    <div class="container p-3">
+      <h1 class="display-3 fw-bold text-center">PRODUCTS</h1>
+      <h3>Search here:</h3>
+      <div class="search-container">
+        <input
+          type="text"
+          class="form-control mb-3"
+          placeholder="Search"
+          id="search"
+        />
+        <button class="btn btn-primary mb-3" id="searchBtn">Search</button>
+      </div>
+      <center>
+        <div class="row" id="productRow"></div>
+      </center>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
