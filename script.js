@@ -125,3 +125,6 @@ search.addEventListener("input", () => {
   console.log(filteredArray);
   renderCards(filteredArray);
 });
+
+
+console.log("Github");
